@@ -1,0 +1,16 @@
+{
+  "name": "node-fundamentals",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Victoe Bonifácio",
+  "license": "ISC",
+  "description": "Este projeto complementa os fundamentos do Node.js",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
