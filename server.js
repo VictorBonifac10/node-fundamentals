@@ -3,27 +3,26 @@ import express from 'express' //IMPORTA O EXPRESS
 const app = express(); //ATRIBUI O EXPRESS A VARIAVEL APP
 app.use(express.json()) //AVISA O EXPRESS QUE UTILIZAREMOS O JSON
 
+let users = []; //SIMULA UM BANCO DE DADOS
+
 //--------------------------------
 //------------------------ROTA GET
 //--------------------------------
 
-app.get('/usuarios/:id', (req, res) => { //req = requisição - res = response
+app.get('/usuarios', (req, res) => { //req = requisição - res = response
 
-    console.log(req);
-    res.send('Estamos acessando a rota usuarios!'); //resposta do servidor
+    res.status(201).json(users); //resposta do servidor
 });
 
 //--------------------------------
-//------------------------ROTA POSTF
+//------------------------ROTA POST
 //--------------------------------
 
 app.post('/usuarios', (req, res) => {
 
-    console.log(req);
-    res.send('Usuário Cadastrado com Sucesso!');
+    users.push(req.body);
+
+    res.status(201).json({ message: "Usuário cadastrado!" })
 })
-
-
-
 
 app.listen(3002); //SELECIONA UMA PORTA DO PC PARA RODAR O SERVIDOR

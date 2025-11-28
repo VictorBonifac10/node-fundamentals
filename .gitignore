@@ -1,3 +1,4 @@
 #archives_ignored
 
 node_modules
+/generated/prisma

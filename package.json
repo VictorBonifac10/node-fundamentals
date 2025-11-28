@@ -11,6 +11,10 @@
   "license": "ISC",
   "description": "Este projeto complementa os fundamentos do Node.js",
   "dependencies": {
+    "@prisma/client": "^7.0.1",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^7.0.1"
   }
 }
