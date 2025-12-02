@@ -4,17 +4,19 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch server.js"
   },
   "keywords": [],
-  "author": "Victoe Bonifácio",
+  "author": "Victor Bonifácio",
   "license": "ISC",
   "description": "Este projeto complementa os fundamentos do Node.js",
   "dependencies": {
-    "@prisma/client": "^7.0.1",
-    "express": "^5.1.0"
+    "@prisma/client": "6.19",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
   },
   "devDependencies": {
-    "prisma": "^7.0.1"
+    "@types/node": "^24.10.1",
+    "prisma": "6.19"
   }
 }

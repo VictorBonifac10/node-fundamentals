@@ -1,6 +1,15 @@
-import express from 'express' //IMPORTA O EXPRESS
+import "dotenv/config";
+import { PrismaClient } from '@prisma/client'
+import express from 'express';
+
+const prisma = global.prisma || new PrismaClient();
+
+if (process.env.NODE_ENV !== 'production') {
+    global.prisma = prisma;
+}
 
 const app = express(); //ATRIBUI O EXPRESS A VARIAVEL APP
+
 app.use(express.json()) //AVISA O EXPRESS QUE UTILIZAREMOS O JSON
 
 let users = []; //SIMULA UM BANCO DE DADOS
