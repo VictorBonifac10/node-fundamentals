@@ -1,4 +1,4 @@
-import "dotenv/config";
+/*import "dotenv/config";
 import { PrismaClient } from '@prisma/client'
 import express from 'express';
 
@@ -35,3 +35,5 @@ app.post('/usuarios', (req, res) => {
 })
 
 app.listen(3002); //SELECIONA UMA PORTA DO PC PARA RODAR O SERVIDOR
+
+*/

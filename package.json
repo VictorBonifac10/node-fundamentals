@@ -1,22 +1,22 @@
 {
   "name": "node-fundamentals",
   "version": "1.0.0",
-  "main": "server.js",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "dev": "node --watch server.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "Victor Bonifácio",
   "license": "ISC",
-  "description": "Este projeto complementa os fundamentos do Node.js",
+  "description": "Este projeto complementa os fundamentos do Node.js + mongoDb + mongoose",
   "dependencies": {
-    "@prisma/client": "6.19",
     "dotenv": "^17.2.3",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
-    "prisma": "6.19"
+    "nodemon": "^3.1.11"
   }
 }
