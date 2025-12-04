@@ -1,8 +1,12 @@
 const UserModel = require('../Models/UserModel'); //IMPORTA A USERMODEL
 
-class UserController { //INCIA O CONTROLLER
+class UserController { //INICIA O CONTROLLER
 
-    async create(req, res) { //CRIAR USER
+    //--------------------------
+    // CRIA USUÁRIO
+    //--------------------------
+
+    async create(req, res) {
 
         const { name, email, age } = req.body
 
@@ -18,7 +22,11 @@ class UserController { //INCIA O CONTROLLER
         }
     };
 
-    async showAll(req, res) { //MOSTRAR TODOS OS USERS
+    //--------------------------
+    // EXIBE TODOS OS USUÁRIOS
+    //--------------------------
+
+    async showAll(req, res) {
         const showAllUsers = await UserModel.find();
 
         try {
@@ -32,7 +40,11 @@ class UserController { //INCIA O CONTROLLER
         }
     };
 
-    async show(req, res) { //MOSTRAR USER
+    //--------------------------
+    // EXIBE APENAS UM USUÁRIO
+    //--------------------------
+
+    async show(req, res) {
         const { id } = req.params
         const showUser = await UserModel.findById(id);
 
@@ -47,7 +59,11 @@ class UserController { //INCIA O CONTROLLER
         }
     };
 
-    async update(req, res) { //ATUALIZAR USER
+    //--------------------------
+    // ATUALIZA USUÁRIO
+    //--------------------------
+
+    async update(req, res) {
         const { id } = req.params
         const updatedUser = await UserModel.findByIdAndUpdate(id, req.body);
 
@@ -62,7 +78,11 @@ class UserController { //INCIA O CONTROLLER
         }
     };
 
-    async delete(req, res) {  //DELETAR USER
+    //--------------------------
+    // DELETA USUÁRIO
+    //--------------------------
+
+    async delete(req, res) {
         const { id } = req.params
         const deleteUser = await UserModel.findByIdAndDelete(id);
 
